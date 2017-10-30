@@ -1,0 +1,37 @@
+{
+  "status":"0",
+  "msg":"",
+  "result":[
+    {
+      "productId":"001",
+      "productName":"小米1",
+      "productPrice":1000,
+      "productImg":"1.jpg"
+    },{
+      "productId":"002",
+      "productName":"小米2",
+      "productPrice":2000,
+      "productImg":"2.jpg"
+    },{
+      "productId":"003",
+      "productName":"小米3",
+      "productPrice":3000,
+      "productImg":"3.jpg"
+    },{
+      "productId":"004",
+      "productName":"小米4",
+      "productPrice":4000,
+      "productImg":"4.jpg"
+    },{
+      "productId":"005",
+      "productName":"小米5",
+      "productPrice":5000,
+      "productImg":"5.jpg"
+    },{
+      "productId":"006",
+      "productName":"小米6",
+      "productPrice":6000,
+      "productImg":"6.jpg"
+    }
+  ]
+}

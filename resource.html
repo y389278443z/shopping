@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    a{
+      display: inline-block;
+      width:100px;
+      height:40px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="app">
+  <h1>vue-resource 讲解</h1>
+  <a href="#" @click="get">get</a>
+  <a href="#" v-on:click="post">post</a>
+  <a href="#" @click="jsonp">jsonp</a>
+  <div>
+    <span>{{msg}}</span>
+  </div>
+</div>
+
+
+
+
+
+<script src="node_modules/vue/dist/vue.js"></script>
+<script src="node_modules/vue-resource/dist/vue-resource.js"></script>
+
+<script>
+  new Vue({
+    el:'#app',
+    data:{
+      msg:''
+    },
+    methods:{
+      get:function () {
+          this.$http.get("package.json",{
+            params:{
+              userId:'100'
+            },
+            header:{
+              token:'1234'
+            }
+          }).then(function (res) {
+            this.msg = res.data;
+          },function (err) {
+            this.msg = err;
+          })
+      },
+      post:function () {
+        this.$http.post('package.json',{
+          userId:'200',
+          header:{
+
+          }
+        }).then(function (res) {
+          this.msg = res.data;
+        })
+      },
+      jsonp:function () {
+
+      },
+      http:function () {
+        this.$http({
+          url:'package.json',
+
+        })
+      }
+    }
+  })
+</script>
+</body>
+</html>
